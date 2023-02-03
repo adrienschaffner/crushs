@@ -16,25 +16,37 @@ export default class extends Controller {
     var delayInMilliseconds2400 = 2400;
     // var delayInMilliseconds2900 = 2900;
 
-    setTimeout(function() {
-      //your code to be executed after 1 second
-      window.addEventListener ("load", loader.classList.add('fondu-out'))
-    }, delayInMilliseconds2100);
+    // setTimeout(function() {
+    //   //your code to be executed after 1 second
+    //   window.addEventListener ("load", loader.classList.add('fondu-out'))
+    // }, delayInMilliseconds2100);
 
-    setTimeout(function() {
-      //your code to be executed after 1 second
-      window.addEventListener ("load", slider.classList.add('transform-y-0'))
-    }, delayInMilliseconds);
+    // setTimeout(function() {
+    //   //your code to be executed after 1 second
+    //   window.addEventListener ("load", slider.classList.add('transform-y-0'))
+    // }, delayInMilliseconds);
 
-    setTimeout(function() {
-      //your code to be executed after 1 second
-      window.addEventListener ("load", title.classList.add('transform-y-20'))
-    }, delayInMilliseconds2400);
+    // setTimeout(function() {
+    //   //your code to be executed after 1 second
+    //   window.addEventListener ("load", title.classList.add('transform-y-20'))
+    // }, delayInMilliseconds2400);
 
-    setTimeout(function() {
-      //your code to be executed after 1 second
-      window.addEventListener ("load", slogan.classList.add('transform-slogan'))
-    }, delayInMilliseconds2400);
+    // setTimeout(function() {
+    //   //your code to be executed after 1 second
+    //   window.addEventListener ("load", slogan.classList.add('transform-slogan'))
+    // }, delayInMilliseconds2400);
+
+
+
+
+
+
+
+
+
+
+
+
 
     // setTimeout(function() {
     //   //your code to be executed after 1 second

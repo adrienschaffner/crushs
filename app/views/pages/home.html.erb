@@ -1,14 +1,19 @@
+
+
+
 <div class="loader" data-loader-target="loader" data-controller="loader" data-action="load@window">
-    <span class="lettre cambria">C</span>
+    <%# <span class="lettre cambria">C</span>
     <span class="lettre cambria">R</span>
     <span class="lettre cambria">U</span>
     <span class="lettre cambria">S</span>
     <span class="lettre cambria">H</span>
-    <span class="lettre cambria">S</span>
-    <span class="lettre cambria">.</span>
+    <span class="lettre cambria">S</span> %>
+    <%# <span class="lettre cambria">.</span> %>
+<%= link_to "CRUSHS", about_path, class:"lettre cambria" %>
 </div>
 
-<div class="slider"></div>
+
+<%# <div class="slider"></div>
 
 <div class="container">
   <div class="header">
@@ -24,22 +29,23 @@
           <%# </li> %>
         <%# <% end %>
       <%# </ul>  %>
-    </div>
-  </div>
+    <%# </div> %>
+  <%# </div> %>
   <div class="main">
     <H1 class="title lettre-s" data-loader-target="loader" data-controller="loader" data-action="load@window">C R U S H S</H1>
     <div>
-      <%# <%= image_tag "logo1", class: "logo-home-page"%>
+      <%= image_tag "logo1", class: "logo-home-page" %>
     </div>
 
-    <H2 class="font-slogan slogan letter-spacing-1 cambria" data-loader-target="loader" data-controller="loader" data-action="load@window"><span>RENCONTREZ-VOUS</span></H2>
+    <H2 class="slogan" data-loader-target="loader" data-controller="loader" data-action="load@window"><span>RENCONTREZ-VOUS</span></H2>
 
-      <div class="btn btn-big">
-        <%# <%= link_to "Trouvez votre crush", new_subscription_path, class: "a-pink"%>
+      <div>
+        <%= link_to "Trouvez votre crush", about_path, class: "btn-home" %>
+        <%# a-pink %>
       </div>
-      <div class="btn btn-ghost">
-        <%= link_to "En savoir plus sur nous", about_path(anchor:"about", class:"underline-white")%>
+      <div>
+        <%= link_to "En savoir plus sur nous", about_path(anchor:"about"), class:"underline-white btn-ghost"%>
       </div>
 
   </div>
-</div>
+<%# </div> %>
