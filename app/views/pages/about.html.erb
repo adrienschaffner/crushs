@@ -1,68 +1,66 @@
 
-<div class="container" data-controller="scroll" data-action="scroll@window">
-        <div class="up-presentation">
-          <div class= "top reveal-1">
-            <h2> Quelque chose de nouveau se prépare ... </h2>
-            <h1><%= image_tag "logo1", class: "logo"%> <em class="title">CRUSHS</em>sera bientôt disponible ! </h1>
-
-            <h4>Soyez l'un des premiers à à participer à l'aventure et à trouver votre <em>Crush</em> !</h4>
-
-            <p>Vous êtes prêt ? Inscrivez-vous pour profiter très bientôt de notre expérience : </p>
-          </div>
-          <div class="input-container reveal-2">
-            <%= simple_form_for @subscription, defaults: {input_html: { minlength: 3, maxlength: 30}}, wrapper: :vertical_form do |f|%>
-            <%= f.input :name, label: 'Votre nom :', placeholder: "Nom", required: true, hint: "Pas de caractères spéciaux s'il vous plaît!" %>
-            <%= f.input :mail, as: :email, label: 'Votre mail :',required: true, placeholder: 'user@domain.com', class: 'input-size', error: 'Username is mandatory, please specify one' %>
-            <%= f.button :submit, "Je me préinscris !", class: "btn-ghost transform-left" %>
-            <% end %>
-          </div>
-        </div>
+<%# <div class="container" data-controller="scroll" data-action="scroll@window"> %>
+<div class="main" data-controller="scroll" data-action="scroll@window">
+  <div class="presentation">
+    <H1 class="title letter" data-loader-target="loader" data-controller="loader" data-action="load@window">C R U S H S</H1>
+    <h2> Quelque chose de nouveau se prépare ... </h2>
+    <%# <h1><%= image_tag "logo1", class: "logo" %>
+    <%# <em class="title">CRUSHS</em> sera bientôt disponible ! </h1> %>
+     <%# <div class="input-container reveal-2"> %>
+      <%# <%= simple_form_for defaults: {input_html: { minlength: 3, maxlength: 30}}, wrapper: :vertical_form do |f|%>
+      <%# <%= f.input :name, label: 'Votre nom :', placeholder: "Nom", required: true, hint: "Pas de caractères spéciaux s'il vous plaît!" %>
+      <%# <%= f.input :mail, as: :email, label: 'Votre mail :',required: true, placeholder: 'user@domain.com', class: 'input-size', error: 'Username is mandatory, please specify one' %>
+      <%# <%= f.button :submit, "Je me préinscris !", class: "btn-ghost transform-left" %>
+      <%# <% end %>
+     <%# </div> %>
+    <%# <h3> <span class="underline-white">Qui sommes-nous</span> : </h3> %>
+  </div>
 
 
-  <div class="down-presentation">
-
-  <h3 class="margin-t-40 margin-l-40 cambria"> <span class="underline-white">En savoir plus sur nous</span> : </h3>
-
-    <div class="box-container" id="about">
-      <div class="box" id="box1">
-        <div>
-        <%= image_tag "user1", class: "img-fluid img-400 img-shadow reveal-1"%>
-        </div>
-        <div class="text reveal-2">
+  <div id="about">
+  <%# <div class="box-container" id="about"> %>
+    <div class="box" id="box1">
+      <div>
+        <%= image_tag "user1", class: "img reveal-1"%>
+      </div>
+      <div class="text reveal-2">
         <p class="pink">_____</p>
-        <h5 class="underline"> Qu'est ce que CRUSHS ?</h5>
+        <h5 class="box-title"> Qu'est ce que CRUSHS ?</h5>
         <p>Toutes les applications de rencontre souhaitent répondre à un problème fondamental :<br>
         Permettre à chacun de faire <span class="underline-white">une véritable rencontre</span> qui réponde à vos attentes. <br>
         Chez CRUSHS, nous pensons qu'un algorithme aussi sophistiqué qu'il soit ne remplacera jamais le feeling, à l'origine d'un véritable Crush et d'une nouvelle histoire, d'un soir ou pour la vie. <br>
         Nous sommes ici pour vous aider à trouver <span class="underline-white">la bonne personne</span>, celle que vous cherchez, pas vous faire rester derrière votre écran
         Tout notre système est pensé pour aller directement à ce but, tout simplement. <br>
         Pour découvrir de nouvelles personnes, faire le premier pas, vous connaître et vous plaire : Nous sommes le <span class="underline-white">coup de pouce</span> dont vous avez besoin !</p>
-        </div>
       </div>
+    </div>
 
-      <div class="box" id="box2">
-        <div class="text reveal-2">
+    <div class="box" id="box2">
+      <div class="text reveal-2">
         <p class="pink">_____</p>
-        <h5 class="underline">Pourquoi s'inscrire ?</h5>
+        <h5 class="box-title">Pourquoi s'inscrire ?</h5>
         <p>Notre objectif est de vous permettre de rencontrer rapidement le ou les personnes qui vous plaisent tout en vous laissant libre de suivre votre feeling. <br>
         En nous aidant à développer notre application vous aidez à son amélioration pour <span class="underline-white">faire de CRUSHS la Référence</span> des rencontres amoureuses et atteindre notre objectif. <br>
           <span class="underline-white">Grâce à vous</span>. <br>
         Parce que nous souhaitons développer notre idée pour vous, avec vous, nous sommes très attachés à vos avis afin de nous améliorer et lancer une version aboutie et réussie. <br>
         C’est également l’assurance d’un <span class="underline-white">haut niveau de satisfaction</span> de la part de nos futurs utilisateurs. <br>
         Enfin, parce que nous souhaitons vous privilégier et vous offrir la possibilité d'être parmi les premiers à pouvoir utiliser CRUSHS. </p>
-        </div>
-        <div>
-        <%= image_tag "user2", class: "img-fluid img-400 img-shadow reveal-1"%>
-        </div>
+        <%# <div> %>
+          <%= link_to "Par ici !", about_path(anchor:"about"), class:"underline-pink btn-pink"%>
+        <%# </div> %>
       </div>
+      <div>
+         <%= image_tag "user2", class: "img reveal-1" %>
+      </div>
+    </div>
 
-      <div class="box" id="box3">
-        <div>
-        <%= image_tag "user3", class: "img-fluid img-400 img-shadow reveal-1"%>
-        </div>
-        <div class="text reveal-2">
+    <div class="box" id="box3">
+      <div>
+        <%= image_tag "user3", class: "img reveal-1" %>
+      </div>
+      <div class="text reveal-2">
         <p class="pink">_____</p>
-        <h5 class="underline">Comment participer ?</h5>
+        <h5 class="box-title">Comment participer ?</h5>
         <p>Remplir tout simplement le <span class="underline-white">formulaire</span> ci-dessus avec votre nom et votre adresse mail.
         Nous vous enverrons ensuite un message de confirmation puis reviendrons rapidement vers vous pour échanger à propos de CRUSHS et vous proposer
         de tester notre application en avant-première afin d'obtenir des informations essentielles, en quelques minutes et selon votre disponibilité. <br>
@@ -70,15 +68,67 @@
         (parce qu'il est important de vous offrir les avantages que vous méritez). <br>
         Vous recevrez ensuite régulièrement les informations sur notre offre et notre évolution, avec accès premium aux nouveautés au fur et à mesure de leur sortie.
         Evidemment, cette proposition est <span class="underline-white">sans engagement</span>, vous êtes libres d'arrêter dès que vous le voulez.
-        </p>
+        <div>
+          <%= link_to "Par ici !", about_path(anchor:"about"), class:"underline-pink btn-pink" %>
         </div>
+        </p>
       </div>
     </div>
-      <div class="footer-without-border reveal-1">
-      <p class= find-us-align">N'hésitez pas à <span class="underline">nous suivre</span>:</p>
-      <%= link_to "",  crushes_path, class: "fab fa-twitter" %>
-      <%= link_to "", crushes_path, class: "fab fa-instagram" %>
-      <%= link_to "", crushes_path, class: "fab fa-facebook" %>
-      </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <%# <div class="presentation-top"> %>
+    <%# <div class= "top reveal-1"> %>
+      <%# <h2> Quelque chose de nouveau se prépare ... </h2> %>
+      <%# <h1><%= image_tag "logo1", class: "logo"%>
+      <%# <em class="title">CRUSHS</em>sera bientôt disponible ! </h1> %>
+
+      <%# <h4>Soyez l'un des premiers à à participer à l'aventure et à trouver votre <em>Crush</em> !</h4> %>
+
+      <%# <p>Vous êtes prêt ? Inscrivez-vous pour profiter très bientôt de notre expérience : </p>
+    </div>
+    <div class="input-container reveal-2">
+      <%= simple_form_for @subscription, defaults: {input_html: { minlength: 3, maxlength: 30}}, wrapper: :vertical_form do |f|%>
+      <%# <%= f.input :name, label: 'Votre nom :', placeholder: "Nom", required: true, hint: "Pas de caractères spéciaux s'il vous plaît!" %>
+      <%# <%= f.input :mail, as: :email, label: 'Votre mail :',required: true, placeholder: 'user@domain.com', class: 'input-size', error: 'Username is mandatory, please specify one' %>
+      <%# <%= f.button :submit, "Je me préinscris !", class: "btn-ghost transform-left" %>
+      <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
+
+
+  <%# <div class="presentation-down">
+
+  <h3 class="margin-t-40 margin-l-40 cambria"> <span class="underline-white">En savoir plus sur nous</span> : </h3>
+
+
+
+
+
+
+
+
+
+
+
+      <%# <div class="footer-without-border reveal-1">
+      <p class= find-us-align">N'hésitez pas à <span class="underline">nous suivre</span>:</p>
+      <%= link_to "",  crushes_path, class: "fab fa-twitter" %>
+      <%# <%= link_to "", crushes_path, class: "fab fa-instagram" %>
+      <%# <%= link_to "", crushes_path, class: "fab fa-facebook" %>
+      <%# </div> %>
+  <%# </div> %>

@@ -40,6 +40,31 @@
   }
 }
 
+.btn-pink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // color: white;
+  // margin: 20px;
+  width: 175px;
+  height: 50px;
+  border: 2px solid #F5A7B3;
+  // padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  // text-align: center;
+  &:hover {
+    // opacity: 0.8;
+    color: white;
+    // color: #F5A7B3;
+    border: 3px solid white;
+    transition:  0.3s ease;
+    background-color: #F5A7B3;
+    text-decoration: none;
+    // font-weight: bolder;
+  }
+}
+
 
 
 // .btn {
