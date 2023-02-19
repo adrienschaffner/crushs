@@ -5,7 +5,23 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
+  height: 100vh;
+  color: #F5A7B3;
   background-color: rgba(6, 7, 54, 1);
+}
+
+.text {
+  // margin: 5vh;
+  padding: 5vh;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
+.visible {
+  opacity: 1;
+  // transition-delay: 2s;
+  transition: opacity 0.3s linear 2s;
+  // transition: height 0.8s ease-out;
 }
 
 

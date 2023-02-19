@@ -1,14 +1,15 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["loader", "title", "font-slogan", "btn", "btn-login"]
+  static targets = ["loader", "main"]
 
   connect() {
-    const loader = document.querySelector('.loader');
-    const slider = document.querySelector('.slider');
-    const title = document.querySelector('.title');
-    const slogan = document.querySelector('.font-slogan');
-    const btn = document.querySelector('.btn-ghost');
+    // const loader = document.querySelector('.loader');
+    const main = document.querySelector('.main');
+    // const slider = document.querySelector('.slider');
+    // const title = document.querySelector('.title');
+    // const slogan = document.querySelector('.font-slogan');
+    // const btn = document.querySelector('.btn-ghost');
     // const btn_login = document.querySelector('.btn-login');
     // Event.preventDefaulft()
     var delayInMilliseconds = 2000; //1 second
@@ -16,10 +17,10 @@ export default class extends Controller {
     var delayInMilliseconds2400 = 2400;
     // var delayInMilliseconds2900 = 2900;
 
-    // setTimeout(function() {
-    //   //your code to be executed after 1 second
-    //   window.addEventListener ("load", loader.classList.add('fondu-out'))
-    // }, delayInMilliseconds2100);
+    setTimeout(function() {
+      //your code to be executed after 1 second
+      window.addEventListener ("load", main.classList.add('visible'))
+    }, delayInMilliseconds2100);
 
     // setTimeout(function() {
     //   //your code to be executed after 1 second
